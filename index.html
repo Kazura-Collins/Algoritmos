@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="./src/index.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card">
+        <div class="top">
+            <div class="userDetails">
+                <div class="profile_img">
+                    <img src="./images/nagitoperezosochikitito.jpg" class="cover" alt="Kazura profile pic">                    
+                </div>
+                <h3>kazuracollins<br><span>Cali, Colombia</span></h3>
+            </div>
+            <div>
+                <img src="./images/dot.png" class="dot" alt="">
+            </div>
+        </div>
+        <div class="imgBx">
+            <img src="./images/kazupost.png" class="cover" alt="post foto Kazura">
+        </div>
+        <div class="actionBtns">
+            <div class="left">
+                <img src="./images/heart.png" class="heart" onclick="likeButton()">
+                <img src="./images/comment.png" alt="">
+                <img src="./images/share.png" alt="">
+            </div>
+            <div class="right">
+                <img src="./images/bookmark.png" alt="">
+            </div>
+        </div>
+        <h4 class="likes">665 likes</h4>
+        <h4 class="message"><b>kazuracollins</b> i hate programming <span>#css</span> <span>#html</span> <span>#javascript</span></h4>
+        <h4 class="comments">View all 88k comments</h4>
+    </div>
+
+    <script>
+        function likeButton(){
+            let heart = document.querySelector('.heart');
+            let likes = document.querySelector('.likes');
+
+            if (heart.src.match("images/heart.png")){
+                heart.src = "images/heart_red.png";
+                likes.innerHTML = "666 likes"
+            }
+            else{
+                heart.src = "images/heart.png";
+                likes.innerHTML = "665 likes"
+            }
+        }
+    </script>
+</body>
+</html>
